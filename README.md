@@ -1,5 +1,3 @@
 # corso-html
 
-OWO
-UWU
-TWT
+Marco Garro
