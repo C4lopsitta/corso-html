@@ -1,38 +1,79 @@
+:root{
+	--dimArticolo: minmax(20rem, 1fr);
+}
+
 body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
 	background-color: #eeeeee;
+	overflow-x: hidden;
 }
 nav{
 	width: 100vw;
 	height: 4rem;
 	margin: 0;
 	padding: 0;
-	display: grid;
-	grid-template-columns: 20rem auto;
-	align-items: center;
 	background-color: #ffffff;
-	grid-column-gap: space-evenly;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 nav h2{
 	margin: 0;
 	padding: 0;
-	grid-column: 1;
 	margin-left: 1.3rem;
 }
 nav ul{
-	grid-column: 2;
 	margin: 0;
 	padding: 0;
 }
 nav ul li{
 	list-style: none;
 	display: inline-block;
-	margin-right: 3rem;
-
 }
 nav ul li a{
+	display: inline-flex;
+	margin-right: 1rem;
+	padding: 0;
+	height: 4rem;
+	width: 10rem;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
 	color: #000000;
+	transition: .4s;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	background-color: #bebebe;
+}
+.gridArticoli{
+	margin: 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, var(--dimArticolo));
+	gap: 1.5rem;
+}
+.gridArticoli a{
+	width: var(--dimArticolo);
+	height: max(46vh);
+	overflow-y: hidden;
+	background-color: #ffffff;
+	border-radius: .8rem;
+	text-decoration: none;
+}
+.gridArticoli a article img{
+	aspect-ratio: 16/9;
+	width: 100%;
+	object-fit: cover;
+	border-top-left-radius: .8rem;
+	border-top-right-radius: .8rem;
+}
+.gridArticoli h2{
+	color: #000;
+	margin: .8rem .8rem;
+}
+.gridArticoli p{
+	color: #000;
+	margin: .8rem .8rem;
 }
