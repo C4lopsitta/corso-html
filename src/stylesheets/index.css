@@ -1,12 +1,27 @@
 :root{
 	--dimArticolo: minmax(20rem, 1fr);
+	--bkg: #eeeeee;
+	--navbar: #ffffff;
+	--text: #000000;
+	--hover: #bebebe;
+}
+@media(prefers-color-scheme : dark){
+	:root{
+		--bkg: #000000;
+		--navbar: #111111;
+		--text: #ffffff;
+		--hover: #2e2e2e;
+	}
+}
+*{
+	color: var(--text);
 }
 
 body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background-color: #eeeeee;
+	background-color: var(--bkg);
 	overflow-x: hidden;
 }
 nav{
@@ -14,7 +29,7 @@ nav{
 	height: 4rem;
 	margin: 0;
 	padding: 0;
-	background-color: #ffffff;
+	background-color: var(--navbar);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -24,29 +39,44 @@ nav h2{
 	padding: 0;
 	margin-left: 1.3rem;
 }
-nav ul{
-	margin: 0;
-	padding: 0;
+@media only screen and (min-width : 900px){
+	nav ul{
+		margin: 0;
+		padding: 0;
+	}
+	nav ul li{
+		list-style: none;
+		display: inline-block;
+	}
+	nav ul li a{
+		display: inline-flex;
+		margin-right: 1rem;
+		padding: 0;
+		height: 4rem;
+		width: 10rem;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		color: var(--text);
+		transition: .4s;
+		text-transform: capitalize;
+	}
+	nav ul li a:hover{
+		background-color: var(--hover);
+	}
+	nav span{
+		visibility: hidden;
+		display: none !important;
+	}
 }
-nav ul li{
-	list-style: none;
-	display: inline-block;
-}
-nav ul li a{
-	display: inline-flex;
-	margin-right: 1rem;
-	padding: 0;
-	height: 4rem;
-	width: 10rem;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	color: #000000;
-	transition: .4s;
-	text-transform: capitalize;
-}
-nav ul li a:hover{
-	background-color: #bebebe;
+@media only screen and (max-width: 899px) {
+	nav ul{
+		visibility: hidden;
+		display: none !important;
+	}
+	nav span{
+		margin-right: 1.3rem;
+	}
 }
 .gridArticoli{
 	margin: 1.5rem;
@@ -58,7 +88,7 @@ nav ul li a:hover{
 	width: var(--dimArticolo);
 	height: max(46vh);
 	overflow-y: hidden;
-	background-color: #ffffff;
+	background-color: var(--navbar);
 	border-radius: .8rem;
 	text-decoration: none;
 }
@@ -70,10 +100,20 @@ nav ul li a:hover{
 	border-top-right-radius: .8rem;
 }
 .gridArticoli h2{
-	color: #000;
+	color: var(--text);
 	margin: .8rem .8rem;
 }
 .gridArticoli p{
-	color: #000;
+	color: var(--text);
 	margin: .8rem .8rem;
+}
+
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 4rem;
+	margin-top: 10rem;
+	background-color: var(--navbar);
 }
