@@ -1,5 +1,6 @@
 :root{
 	--dimArticolo: minmax(20rem, 1fr);
+<<<<<<< Updated upstream
 	--bkg: #eeeeee;
 	--navbar: #ffffff;
 	--text: #000000;
@@ -12,13 +13,19 @@
 		--text: #ffffff;
 		--hover: #2e2e2e;
 	}
+=======
+>>>>>>> Stashed changes
 }
 
 body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+<<<<<<< Updated upstream
 	background-color: var(--bkg);
+=======
+	background-color: #eeeeee;
+>>>>>>> Stashed changes
 	overflow-x: hidden;
 }
 nav{
@@ -26,7 +33,15 @@ nav{
 	height: 4rem;
 	margin: 0;
 	padding: 0;
+<<<<<<< Updated upstream
 	background-color: var(--navbar);
+=======
+	display: grid;
+	grid-template-columns: 20rem auto;
+	align-items: center;
+	background-color: #ffffff;
+	grid-column-gap: space-evenly;
+>>>>>>> Stashed changes
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -34,6 +49,7 @@ nav{
 nav h2{
 	margin: 0;
 	padding: 0;
+<<<<<<< Updated upstream
 	margin-left: 3rem;
 }
 @media only screen and (min-width : 900px){
@@ -74,6 +90,37 @@ nav h2{
 	nav span{
 		margin-right: 1.3rem;
 	}
+=======
+	grid-column: 1;
+	margin-left: 1.3rem;
+}
+nav ul{
+	grid-column: 2;
+	margin: 0;
+	padding: 0;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 3rem;
+
+}
+nav ul li a{
+	display: inline-flex;
+	margin-right: 1rem;
+	padding: 0;
+	height: 4rem;
+	width: 10rem;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #000000;
+	transition: .4s;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	background-color: #bebebe;
+>>>>>>> Stashed changes
 }
 .gridArticoli{
 	margin: 1.5rem;
@@ -85,7 +132,11 @@ nav h2{
 	width: var(--dimArticolo);
 	height: max(46vh);
 	overflow-y: hidden;
+<<<<<<< Updated upstream
 	background-color: var(--navbar);
+=======
+	background-color: #ffffff;
+>>>>>>> Stashed changes
 	border-radius: .8rem;
 	text-decoration: none;
 }
@@ -97,6 +148,7 @@ nav h2{
 	border-top-right-radius: .8rem;
 }
 .gridArticoli h2{
+<<<<<<< Updated upstream
 	color: var(--text);
 	margin: .8rem .8rem;
 }
@@ -113,4 +165,16 @@ footer{
 	height: 4rem;
 	margin-top: 10rem;
 	background-color: var(--navbar);
+=======
+	color: #000;
+	margin: .8rem .8rem;
+}
+.gridArticoli p{
+	color: #000;
+	margin: .8rem .8rem;
+}
+footer p small{
+	width: central;
+	margin-top: 10rem;
+>>>>>>> Stashed changes
 }
